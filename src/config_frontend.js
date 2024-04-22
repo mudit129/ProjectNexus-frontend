@@ -5,7 +5,7 @@ module.exports = {
   },
 
   server: {
-    //host: "http://localhost:5001",
+    // host: "http://localhost:5001",
     host: "https://projectnexus-backend.onrender.com",
     port: "5001",
   },
