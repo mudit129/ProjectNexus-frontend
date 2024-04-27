@@ -29,13 +29,13 @@ const AllProjectsPage = () => {
     console.log(result.data);
     // console.log(result.data.name);
   };
-
+// eslint-disable-next-line
   useEffect(() => {
     if (flag) {
       setFlag(false);
       getProfNames();
     }
-  }, []);
+  }, [flag]);
 
   useEffect(() => {
     getPdf();
@@ -51,13 +51,13 @@ const AllProjectsPage = () => {
     setSearchTerm(event.target.value);
   };
 
-  const handleDomainChange = (domain) => {
-    setSelectedDomain(domain);
-  };
+  // const handleDomainChange = (domain) => {
+  //   setSelectedDomain(domain);
+  // };
 
-  const handleProfessorChange = (professor) => {
-    setSelectedProfessor(professor);
-  };
+  // const handleProfessorChange = (professor) => {
+  //   setSelectedProfessor(professor);
+  // };
 
   const handleSearchSubmit = () => {
     // Filter projects based on search term

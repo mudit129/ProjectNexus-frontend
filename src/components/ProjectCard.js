@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import img from "../images/aerospace.jpg";
 import ProjectImage from "./ProjectImage/ProjectImage";
 const config = require("../config_frontend.js");
@@ -40,7 +40,8 @@ const ProjectCard = (props) => {
   };
 
   useEffect(() => {
-    if (page !== "all") getType();
+    if (page !== "all") 
+      getType();
   }, []);
 
   const trimDesc = (desc) => {

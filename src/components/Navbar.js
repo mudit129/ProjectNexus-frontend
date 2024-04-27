@@ -9,7 +9,7 @@ const Navbar = (props) => {
   let location = useLocation();
   let navigate = useNavigate();
   const [name, setName] = useState(null);
-  let [flag, setFlag] = useState(true);
+  // let [flag, setFlag] = useState(true);
   const getName = async () => {
     if (!localStorage.getItem("token")) {
       setName("Profile");

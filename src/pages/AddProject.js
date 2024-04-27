@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const config = require("../config_frontend.js");
 
 const host = config.server.host;
 
 const AddProject = (props) => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [flag, setFlag] = useState(true);
   const [image, setImage] = useState("");
   const [profNames, setProfNames] = useState([]);
@@ -47,7 +47,7 @@ const AddProject = (props) => {
       setFlag(false);
       getProfNames();
     }
-  }, []);
+  }, [flag]);
 
   // const profs = [
   //   { label: "Professor 1", value: 1 },
@@ -112,6 +112,7 @@ const AddProject = (props) => {
           })
           .then((res) => {
             props.showAlert("Uploaded Successfully", "success");
+            console.log(result)
           })
           .catch((er) => console.log("error", er));
 
