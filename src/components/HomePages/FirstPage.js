@@ -20,7 +20,7 @@ const FirstPage = () => {
       <div className="d-grid gap-2 d-md-flex justify-content-md-center">
         <button
           type="button"
-          class="btn"
+          className="btn"
           onClick={() => navigate("/allProjects")}
         >
           Explore Projects
